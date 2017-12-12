@@ -152,8 +152,7 @@ public abstract class RecyclerFragment<MODEL extends CursorModel> extends Fragme
             RecyclerView.LayoutManager manager = view.getLayoutManager();
             if (manager.getChildCount() > 0) {
                 int count = manager.getItemCount();
-                int last = ((RecyclerView.LayoutParams) manager
-                        .getChildAt(manager.getChildCount() - 1).getLayoutParams()).getViewAdapterPosition();
+                int last = ((RecyclerView.LayoutParams) manager.getChildAt(manager.getChildCount() - 1).getLayoutParams()).getViewAdapterPosition();
 
                 if (last == count - 1 && !mIsLoading && mInteractionListener != null) {
                     requestMore();
